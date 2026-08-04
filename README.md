@@ -29,25 +29,38 @@ End-to-end analysis and content-based music recommendation system using Spotify 
 ---
 
 ## 📁 Project Structure
-<!--
-spotify-music-recommender/
-├── data/                       # raw / processed datasets (or links)
-├── notebooks/
-│   ├── 01_data_collection_eda.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   ├── 03_recommender.ipynb
-│   └── 04_clustering_mood.ipynb
-├── src/
-│   ├── data_loader.py
-│   ├── features.py
-│   ├── recommender.py
-│   └── clustering.py
-├── demo/                       # optional Gradio/Streamlit app
-├── requirements.txt
-├── README.md
-└── LICENSE -->
 
----
+spotify-music-recommender/
+
+├── data/                       # raw / processed datasets (or links)
+
+├── notebooks/
+
+│   ├── 01_data_collection_eda.ipynb
+
+│   ├── 02_feature_engineering.ipynb
+
+│   ├── 03_recommender.ipynb
+
+│   └── 04_clustering_mood.ipynb
+
+├── src/
+
+│   ├── data_loader.py
+
+│   ├── features.py
+
+│   ├── recommender.py
+
+│   └── clustering.py
+
+├── demo/                       # optional Gradio/Streamlit app
+
+├── requirements.txt
+
+├── README.md
+
+└── LICENSE
 
 ---
 
@@ -57,3 +70,71 @@ spotify-music-recommender/
 ```bash
 git clone https://github.com/S33mi/spotify-music-recommender.git
 cd spotify-music-recommender
+```
+2. Create a virtual environment and install dependencies
+```
+python -m venv venv
+source venv/bin/activate   # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+```
+3. (Optional) Set up Spotify API credentials
+Create a .env file with:
+```
+SPOTIPY_CLIENT_ID=your_client_id
+SPOTIPY_CLIENT_SECRET=your_client_secret
+```
+4. Open the notebooks in order and run them.
+
+---
+
+## 📊 Approach
+
+1. **Data Collection**
+    - Spotify Web API via `spotipy` or public Kaggle Spotify datasets
+
+2. **Exploratory Analysis**
+   - Distribution of audio features
+   - Correlations between danceability, energy, valence, etc.
+   - Genre / popularity insights
+
+3. **Feature Engineering**
+    - Scaling + optional feature selection
+
+4. **Recommendation**
+    - Content-based filtering using cosine similarity on audio feature vectors
+    - KNN-based nearest neighbors
+
+5. **Clustering**
+    - K-Means / hierarchical clustering to discover natural song groups and mood playlists
+
+---
+
+## 📈 Results & Insights
+- [`01_data_collection_eda.ipynb`](https://github.com/S33mi/spotify-music-recommender/blob/main/notebook/01_data_collection_eda.ipynb)
+   - Dataset size after cleaning: **(89741, 21)** tracks
+   - Most common genres: **k-pop**
+   - Features with strongest correlation to popularity: **danceability and loudness**
+   - Notable patterns (e.g., high-energy tracks, valence distribution, etc.):
+      - Energy and loudness are usually strongly positively correlated
+      - Acousticness tends to be negatively correlated with energy and loudness.
+      - Valence (positiveness) often shows moderate positive correlation with danceability.
+      - Most of avaiable tracks are very unpopuler or have a low play count.
+
+---
+<!--
+## 🎯 Future Improvements
+
+- Hybrid recommender (content + collaborative filtering)
+- User playlist upload & personalization
+- Tempo / energy progression analysis
+- Integration with playlist optimization project
+- Better demo interface
+
+--- -->
+
+## 📄 License
+MIT License
+
+**Author:** [S33mi](https://github.com/S33mi/)
+
+Open to Data Analyst / Machine Learning opportunities.
