@@ -1,0 +1,93 @@
+Libraries loaded successfully.
+Data shape          : (89741, 16)
+Feature matrix shape: (89741, 10)
+Feature columns     : ['danceability', 'energy', 'loudness', 'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_min']
+---
+Search example – 'blinding':
+track_id	track_name	artists	track_genre	popularity
+13198	6VXMal8tPWfZl0KOIwp359	Blinding Lights	Kidz Bop Kids	children	0
+22124	7JAo7wy8BzmP9smtTJ3fuU	Blinding Lights	Lucas Estrada;Twan Ray	deep-house	51
+28043	0wI0S42Cg41DVGqIIVimTM	Blinding Lights	Revelries;Victoria Voss	edm	64
+40692	2pUI7cFLOYqtNQska1JEEI	Blinding Lights (Instrumental Guitar)	Guus Dielissen	guitar	43
+67618	0VjIjW4GlUZAMYd2vXMi3b	Blinding Lights	The Weeknd	pop	91
+67672	7LltNXuqCBGOAp1iwmAmB3	Blinding Lights	The Weeknd	pop	0
+67673	5Dt9HFzeBVmFtrk3BTiDEn	Blinding Lights	The Weeknd	pop	3
+67674	4O0ymDK32zylHELT506JPI	Blinding Lights	The Weeknd	pop	0
+67676	6h49LElLEJLbKfR6zdcFtf	Blinding Lights	The Weeknd	pop	3
+70324	56GH1HDx3NzS4wDDdNQVe9	Blinding Lights	All Time Low	punk-rock	1
+---
+Working with sample of 8000 tracks for full cosine matrix demo.
+Cosine similarity matrix shape: (8000, 8000)
+Seed track: The Steeple
+Artist    : Halestorm
+Genre     : alternative
+---
+track_name	artists	track_genre	popularity	similarity
+0	The Resistance	Skillet	alt-rock	69	0.978108
+1	Tek It	Cafuné	indie	0	0.975924
+2	Maybe	Sick Puppies	grunge	46	0.971131
+3	Sex Not Violence	YUNGBLUD	british	55	0.970476
+4	Hands Up	City Wolf	blues	53	0.970313
+5	Heartless Madness	Dynazty	hard-rock	63	0.969730
+6	I Miss the Misery	Halestorm	grunge	61	0.968395
+7	Corazon De Oro	Rancid	ska	31	0.964218
+---
+NearestNeighbors model fitted on full dataset.
+track_id	track_name	artists	track_genre	popularity
+13198	6VXMal8tPWfZl0KOIwp359	Blinding Lights	Kidz Bop Kids	children	0
+22124	7JAo7wy8BzmP9smtTJ3fuU	Blinding Lights	Lucas Estrada;Twan Ray	deep-house	51
+28043	0wI0S42Cg41DVGqIIVimTM	Blinding Lights	Revelries;Victoria Voss	edm	64
+40692	2pUI7cFLOYqtNQska1JEEI	Blinding Lights (Instrumental Guitar)	Guus Dielissen	guitar	43
+67618	0VjIjW4GlUZAMYd2vXMi3b	Blinding Lights	The Weeknd	pop	91
+---
+Seed Track : Blinding Lights
+Artists    : Kidz Bop Kids
+Genre      : children
+Popularity : 0
+---
+track_id	track_name	artists	track_genre	popularity	cosine_similarity
+0	6wtELTbJEAkbugVDSKa0sh	Atrakce	PAWLIE POIZN;Medooza	emo	36	0.989883
+1	1MOOJuxUu9QiQE9GgkYYPb	My Person	Spencer Crandall	country	61	0.987022
+2	1sQie71FoBxfYusuTDOXAA	Mob Rule	Bad//Dreems	garage	29	0.986477
+3	1K61P0kbiT6cJzh77NnxFg	My Person	Spencer Crandall	country	55	0.986402
+4	0SFETrpna5wpB1ibBPPyWI	Me Voy	Los Victorios	ska	34	0.985518
+5	3r6AJfqJ44FepL26lwLMPf	1+1	Ready Kirken	folk	46	0.980496
+6	2g9UPl5sdCGAcszvwMhE5o	Rock de la Cárcel	Palito Ortega	rock-n-roll	33	0.979025
+7	5RdZcipSf2Xysg02sVsoEp	La Alegría en Serio	Los Caligaris	ska	40	0.977845
+8	4cNOOkWBjY41prOyd2r6Jz	Manohari	Divya Kumar;Neeti Mohan	folk	55	0.977239
+9	4haXv9IJwOlJJsT6FNJPYk	The Middle	Jimmy Eat World	alt-rock	0	0.976680
+---
+Seed Track : Shape Of You
+Artists    : Andrew Foy
+Genre      : guitar
+Popularity : 24
+---
+track_id	track_name	artists	track_genre	popularity	cosine_similarity
+0	0o30XkI520zpdZIeSRaSXr	Overture in the French Style, Op. 2, BWV 831 (Excerpts): XI. Echo	Johann Sebastian Bach;Orion Weiss	classical	0	0.970357
+1	6dDnNol7rIKv6KO6JzV8jk	Old Pine Box	Andrew Marlin	bluegrass	21	0.965143
+2	7snsIXBqXSt3XcYAJUiBNr	This Here	Bobby Timmons	piano	32	0.964491
+3	5QFoUJ4XD88IEA5FYst3e6	Amaneci En Tus Brazos	Chamin Madero	guitar	20	0.962882
+4	6IWumNs0oyQfa8mLd5rjcn	Voila!	Stuart Duncan;Edgar Meyer;Chris Thile;Yo-Yo Ma	bluegrass	23	0.962263
+5	7jmKrl6M28CmP0eUEd2J2k	Minha Saudade	João Gilberto	guitar	23	0.961582
+6	4LGOSAiawQeYRefjruL9Xe	Brasileirinho	Eudóxia De Barros	piano	27	0.958165
+7	53yCbC8zjcNQi5534UDoWL	Memories (Instrumental Guitar)	Guus Dielissen	acoustic	37	0.958030
+---
+track_name	artists	track_genre	popularity	cosine_similarity
+0	Rain	Motohiro Hata	acoustic	58	1.000000
+1	Woh Din (Film Version)	Pritam;TUSHAR JOSHI	indian	46	0.965323
+2	Woh Din (From "Chhichhore")	Pritam;TUSHAR JOSHI	indian	50	0.965323
+3	Manwa Laage	Shreya Ghoshal;Arijit Singh	pop-film	60	0.960565
+4	A Veces Me Pregunto	DLG	salsa	29	0.956166
+5	Jogi	Yasser Desai;Aakanksha Sharma	pop-film	67	0.955675
+---
+Saved:
+  - models/knn_recommender.pkl
+  - data/processed/meta_for_recommender.csv
+---
+Seed Track : Comedy
+Artists    : Gen Hoshino
+Genre      : acoustic
+Popularity : 73
+
+Seed genre: acoustic
+Genre match rate in top-10: 20.00%
