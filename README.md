@@ -121,7 +121,7 @@ SPOTIPY_CLIENT_SECRET=your_client_secret
       - Most of avaiable tracks are very unpopuler or have a low play count.
 
 -  [`02_feature_engineering.ipynb`](https://github.com/S33mi/spotify-music-recommender/blob/main/notebook/02_feature_engineering.ipynb)
-  - Audio features have different scales (e.g. loudness is in dB, tempo in BPM, others 0-1). We need to scale them before computing distances / similarity.
+    - Audio features have different scales (e.g. loudness is in dB, tempo in BPM, others 0-1). We need to scale them before computing distances / similarity.
         ![Features_Sacling_Output](data/output/02_Features_Scaling.png)
 
 ---
